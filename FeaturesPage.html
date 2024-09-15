@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise - Accomplishments</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6fb7b3, #b2d8d8); 
+            color: #2d2d2d;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .accomplishments-section {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #f0f0f0;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+       
+        .slider-wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        
+        .features-slider {
+            display: flex;
+            transition: transform 0.5s ease; 
+        }
+
+        .feature-card {
+            background-color: #e9f5f5; 
+            border-radius: 8px;
+            padding: 20px;
+            width: 220px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 0 10px;
+            flex-shrink: 0;
+        }
+
+        .feature-card img {
+            max-width: 80px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #2d5c5c;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card a {
+            color: #007c7a;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        
+        .dots-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #007c7a;
+        }
+
+        
+        .images-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .images-section h2 {
+            color: #ffffff;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .images-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .images-gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="accomplishments-section">
+            <h1><b>Features of SPENDWISE</b></h1>
+            
+            <div class="slider-wrapper">
+                <div class="features-slider">
+                    <div class="feature-card">
+                        <img src="Screenshot_2024-09-14_235009-removebg-preview.png" alt="Personaised Budgeting Plans">
+                        <h3>Personalised Budgeting Plans</h3>
+                        <a href="PersonlisedBudgetPlan.html">Click Here →</a>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Screenshot_2024-09-14_235621-removebg-preview.png" alt="Trusted Expense Sharing">
+                        <h3>Trustes Expense Sharing</h3>
+                        <a href="TrustesExpenseSHaring.html">Click Here →</a>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Screenshot_2024-09-15_000332-removebg-preview.png" alt="Expense Reminder For Students">
+                        <h3>Expense Reminder For Students</h3>
+                        <a href="ExpenseReminderForStudents.html">Click Here →</a>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Screenshot_2024-09-15_000101-removebg-preview.png" alt="Goal Oriented Savings Plans">
+                        <h3>Goal Oriented Savings Plans</h3>
+                        <a href="GoalOrientedSavingsPlans.html">Click Here →</a>
+                    </div>
+                    <div class="feature-card">
+                        <img src="Screenshot_2024-09-15_004012-removebg-preview.png" alt="Debt & Loan Management">
+                        <h3>Debt & Loan Management</h3>
+                        <a href="Debt&LoanManagement.html">Click Here →</a>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="dots-container">
+                <span class="dot" onclick="moveSlider(0)"></span>
+                <span class="dot" onclick="moveSlider(1)"></span>
+                <span class="dot" onclick="moveSlider(2)"></span>
+                <span class="dot" onclick="moveSlider(3)"></span>
+                <span class="dot" onclick="moveSlider(4)"></span>
+            </div>
+        </section>
+
+        
+    </div>
+
+    <script>
+        
+        let currentSlide = 0;
+
+        function moveSlider(index) {
+            const slider = document.querySelector('.features-slider');
+            const slideWidth = document.querySelector('.feature-card').clientWidth + 20; 
+            slider.style.transform = `translateX(${-index * slideWidth}px)`;
+            currentSlide = index;
+
+            
+            updateDots();
+        }
+
+        function updateDots() {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        
+        updateDots();
+    </script>
+</body>
+</html>

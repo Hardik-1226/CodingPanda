@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPENDWISE</title>
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            /* Modern gradient background with your existing colors */
+            background: linear-gradient(135deg, #49d2d7, #3367D6);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Header styling */
+        header {
+            width: 100%;
+            height: 7%;
+            background: linear-gradient(90deg, #50b3c4, #5496d3);
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(31, 82, 199, 0.61);
+            z-index: 1000;
+            animation: fadeIn 2s ease-out; /* Animation for header */
+        }
+
+        .round-logo {
+            height: 60px;
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .header-buttons button {
+            background-color: #6ccaca;
+            color: rgba(255, 253, 253, 0.922);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .header-buttons button:hover {
+            transform: scale(1.1); /* Hover animation for buttons */
+        }
+
+        .content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 20px;
+            margin-top: 150px;
+            animation: fadeIn 3s ease-out; /* Animation for content */
+        }
+
+        .content h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: zoomIn 1.5s ease-out; /* Animation for welcome text */
+        }
+
+        .content p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .content .cta-button {
+            background-color: #3367D6;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .content .cta-button:hover {
+            background-color: #2459c5; /* Button hover effect */
+        }
+
+        .illustration img {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 400px;
+            animation: float 4s ease-in-out infinite; /* Floating animation */
+        }
+
+        /* Button for How it Works */
+        .how-it-works-btn {
+            position: fixed;
+            top: 50%;
+            left: 5%;
+            background-color: #337eff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transform: translateY(-50%);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+
+        .how-it-works-btn:hover {
+            background-color: #ff704d;
+            transform: scale(1.1);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="WhatsApp_Image_2024-09-14_at_17.13.41_548e2aef-removebg[1].png" alt="SPENDWISE Logo" class="round-logo">
+        <ul class="nav-links">
+            <li><a href="WhatisSPENDWISE.html">About</a></li>
+            <li><a href="WalletPage.html">Wallet</a></li>
+            <li><a href="FeaturesPage.html">Features</a></li>
+            <li><a href="Refral&EarnPage.html">Refer & Earn</a></li>
+            <li><a href="#">Savings</a></li>
+        </ul>
+        <div class="header-buttons">
+            <button><a href="SignInSignUpPage.html">SignUp</a></button>
+            <button><a href="SignInSignUpPage.html">SignIn</a></button>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>WELCOME TO SPENDWISE</h1>
+        <p><b>"Smart Spending, Simple Living"</b></p>
+        <a href="StartyourFreetrialpage.html" class="cta-button">Start your Free Trial</a>
+    </div>
+
+    <div class="illustration">
+        <img src="Screenshot_2024-09-14_200142-removebg-preview (1).png" alt="Illustration">
+    </div>
+
+    
+    <!-- <button class="how-it-works-bt
+    <a href="Howitworks.html" class="how-it-works-btn">How it works??</a>
+
+</body>
+</html>

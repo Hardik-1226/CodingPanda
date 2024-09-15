@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer & Earn</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Title Heading */
+        h1 {
+            color: #006666; /* Teal color for the heading */
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        /* Icon Styling */
+        .icon {
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+            display: block;
+            animation: bounce 2s infinite;
+        }
+
+        /* Description Text */
+        .description {
+            font-size: 1.2em;
+            color: #004d40;
+            margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* Button Styling */
+        .button {
+            background-color: #004d40; /* Dark teal background for the button */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #00796b; /* Slightly lighter teal on hover */
+            transform: scale(1.05);
+        }
+
+        /* Footer Text */
+        .footer-text {
+            margin-top: 50px;
+            font-size: 1em;
+            color: #006666;
+        }
+
+        /* Keyframe Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Title -->
+    <h1>Refer & Earn</h1>
+
+    <!-- Icon Image -->
+    <img src="people-share-info-about-referral-and-earn-money-refer-a-friend-concept-affiliate-marketing-landing-page-template-for-banner-flyer-ui-web-mobile-app-poster-vector-removebg-preview.png" alt="Share Icon" class="icon"  width="160" height="150" >
+
+    <!-- Description Text -->
+    <p class="description">Invite your friends and family to join us and earn amazing rewards! For every successful referral, you'll earn exclusive bonuses. The more you share, the more you earn. It's that simple!</p>
+
+    <!-- Button -->
+    <button class="button">Share and Earn</button>
+
+    <!-- Footer Text -->
+    <p class="footer-text">Start sharing now and watch your rewards grow!</p>
+
+</body>
+</html>

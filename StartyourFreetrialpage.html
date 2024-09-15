@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise - Free Trial</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #D4F1F4, #75E6DA); 
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: scale(0.9);
+            animation: zoomIn 1s ease forwards;
+        }
+
+        .left {
+            background: linear-gradient(135deg, #A7FFEB, #1DE9B6); 
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #2C3E50;
+            animation: slideInLeft 1s ease-in-out;
+        }
+
+        .left h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .left p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .right {
+            background: white;
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: slideInRight 1s ease-in-out;
+        }
+
+        .right h2 {
+            color: #2C3E50;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .right p {
+            font-size: 14px;
+            color: #7F8C8D;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group input {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #BDC3C7;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #3498DB;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.5); 
+        }
+
+        .submit-btn {
+            background-color: #27AE60; 
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #2ECC71; 
+            transform: translateY(-3px);
+        }
+
+        .alternative {
+            text-align: center;
+            margin: 20px 0;
+            color: #7F8C8D;
+            font-size: 14px;
+        }
+
+        .alternative-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .alt-btn {
+            background-color: #3498DB; 
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .alt-btn:hover {
+            background-color: #2980B9; 
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .floating-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 15%;
+            left: 5%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+
+    <div class="container">
+        
+        <div class="left">
+            <h1>Try SpendWise Free for 30 Days</h1>
+            <p>Spend smarter with SpendWise. Our budgeting tool helps students manage finances effectively. Save more, stress less.</p>
+        </div>
+
+       
+        <div class="right">
+            <h2>Start your free trial today</h2>
+            <p>No credit card required!</p>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button class="submit-btn">Start Your Free Trial</button>
+            
+            <div class="alternative">
+                <p>By creating an account, you agree to our <a href="#" style="color: #3498DB;">Privacy Policy</a> and <a href="#" style="color: #3498DB;">Terms of Service</a>.</p>
+            </div>
+
+            <div class="alternative-buttons">
+                <button class="alt-btn">Continue with Apple</button>
+                <button class="alt-btn">Continue with Google</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

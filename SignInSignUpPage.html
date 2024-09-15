@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #D4F1F4, #75E6DA);
+            overflow: hidden;
+            animation: backgroundAnimation 5s ease-in-out infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background: linear-gradient(135deg, #D4F1F4, #75E6DA);
+            }
+            100% {
+                background: linear-gradient(135deg, #A7E3E8, #56C6B1);
+            }
+        }
+
+        .container {
+            width: 400px;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: containerAnimation 0.5s ease-out;
+        }
+
+        @keyframes containerAnimation {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            color: #2C3E50;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #BDC3C7;
+            border-radius: 4px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #56C6B1;
+            box-shadow: 0 0 8px rgba(86, 198, 177, 0.5);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            color: white;
+            background-color: #27AE60;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #2ECC71;
+            transform: scale(1.05);
+        }
+
+        .toggle-btn {
+            text-align: center;
+            margin-top: 20px;
+            color: #3498DB;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.2s;
+        }
+
+        .toggle-btn:hover {
+            color: #2980B9;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .bounce-in {
+            animation: bounceIn 1s ease-in-out;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: translateY(-1000px);
+                opacity: 0;
+            }
+            60% {
+                transform: translateY(30px);
+                opacity: 1;
+            }
+            80% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container bounce-in">
+       
+        <div id="sign-in-form">
+            <h2>Sign In</h2>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button class="btn">Sign In</button>
+            <p class="toggle-btn" onclick="toggleForms()">Don't have an account? Sign Up</p>
+        </div>
+
+        
+        <div id="sign-up-form" class="hidden">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <input type="text" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button class="btn">Sign Up</button>
+            <p class="toggle-btn" onclick="toggleForms()">Already have an account? Sign In</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const signInForm = document.getElementById('sign-in-form');
+            const signUpForm = document.getElementById('sign-up-form');
+            signInForm.classList.toggle('hidden');
+            signUpForm.classList.toggle('hidden');
+
+            
+            if (!signUpForm.classList.contains('hidden')) {
+                signUpForm.classList.add('bounce-in');
+            } else {
+                signInForm.classList.add('bounce-in');
+            }
+        }
+    </script>
+
+</body>
+</html>

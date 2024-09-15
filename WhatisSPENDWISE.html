@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecondPage - SpendWise</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        header {
+            width: 100%;
+            background: linear-gradient(90deg, #61c8df, #0083b0); 
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            z-index: 1000;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .header-logo {
+            height: 50px;
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 20px; 
+        }
+        
+        @keyframes float {
+            0% { transform: translatey(0px); }
+            50% { transform: translatey(-20px); }
+            100% { transform: translatey(0px); }
+        }
+        
+        .about-section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 60%;
+            margin-top: 150px; 
+            animation: float 3s ease-in-out infinite; 
+        }
+        .about-section h1 {
+            font-size: 32px;
+            color: #207f84;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #30827a;
+        }
+        
+        .cloud {
+            position: absolute;
+            width: 150px;
+            height: 80px;
+            background: #20cda5;
+            border-radius: 100px;
+            animation: float 5s ease-in-out infinite;
+        }
+        .cloud:before,
+        .cloud:after {
+            content: '';
+            position: absolute;
+            background: #00b4db;
+            width: 100px;
+            height: 80px;
+            position: absolute;
+            top: -40px;
+            left: 10px;
+            border-radius: 100px;
+        }
+        .cloud:after {
+            width: 70px;
+            height: 70px;
+            top: -30px;
+            left: auto;
+            right: 15px;
+            border-radius: 100px;
+        }
+        
+        .cloud1 {
+            top: 10%;
+            left: 5%;
+        }
+        .cloud2 {
+            top: 60%;
+            right: 10%;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <img src="WhatsApp_Image_2024-09-14_at_17.13.41_548e2aef-removebg[1].png" alt="SpendWise Logo" class="header-logo"> <!-- Add your logo image here -->
+        <ul class="nav-links">
+            <li><a href="FirstPage.html">Home</a></li>
+            <li><a href="WalletPage.html">Wallet</a></li>
+            <li><a href="FeaturesPage.html">Features</a></li>
+            <li><a href="#">Refer & Earn</a></li>
+            <li><a href="#">Savings</a></li>
+        </ul>
+    </header>
+
+    
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+
+    
+    <div class="about-section">
+        <h1>About SpendWise</h1>
+        <p>
+            "Enjoy guilt-free spending and effortless saving with SpendWise, the ultimate budgeting tool tailored for students. Our friendly and flexible platform empowers you to take full control of your finances, helping you spend smarter while saving towards your goals. With personalized budgeting plans, debt and loan management, and goal-oriented savings strategies, SpendWise makes managing your money easy and stress-free. Start your journey to financial freedom with SpendWise and experience a smarter, more enjoyable way to handle your finances."
+        </p>
+    </div>
+
+</body>
+</html>

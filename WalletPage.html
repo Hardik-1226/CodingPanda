@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wallet</title>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #438b99; 
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .wallet-container {
+            background-color: #113b4a;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 350px;
+        }
+
+       
+        .wallet-header {
+            margin-bottom: 20px;
+        }
+
+        .wallet-icon {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .balance-display {
+            background-color: #a5ffdb;
+            color: #000;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+       
+        .add-money-section {
+            margin: 20px 0;
+        }
+
+        .rupee-icon {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .add-money-section h2 {
+            color: #a5ffdb;
+            margin: 0;
+        }
+
+        #amount-input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        #add-money-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745; 
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #add-money-button:hover {
+            background-color: #218838;
+        }
+
+        
+        .transaction-section {
+            margin-top: 20px;
+        }
+
+        #transaction-history-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #transaction-history-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="wallet-container">
+        <div class="wallet-header">
+            <img src="Screenshot_2024-09-15_002129-removebg-preview.png" alt="Wallet Icon" width="100" height="70" class="wallet-icon"> 
+            <h1>My Wallet</h1>
+            <div class="balance-display">0/- Balance</div>
+        </div>
+        
+        <div class="add-money-section">
+            <img src="Screenshot_2024-09-15_002152-removebg-preview.png" alt="Rupee Icon" class="rupee-icon"> 
+            <h2>Add Money</h2>
+            <input type="number" placeholder="Enter Amount" id="amount-input">
+            <button id="add-money-button">Add Money</button>
+        </div>
+        
+        <div class="transaction-section">
+            <button id="transaction-history-button">Transaction History</button>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const balanceDisplay = document.querySelector('.balance-display');
+            const amountInput = document.getElementById('amount-input');
+            const addMoneyButton = document.getElementById('add-money-button');
+            const transactionHistoryButton = document.getElementById('transaction-history-button');
+
+            let balance = 0;
+            let transactions = [];
+
+            addMoneyButton.addEventListener('click', () => {
+                const amount = parseFloat(amountInput.value);
+                if (amount && amount > 0) {
+                    balance += amount;
+                    transactions.push(`Added ₹${amount.toFixed(2)}`);
+                    balanceDisplay.textContent = `${balance}/- Balance`;
+                    amountInput.value = '';
+                } else {
+                    alert('Please enter a valid amount.');
+                }
+            });
+
+            transactionHistoryButton.addEventListener('click', () => {
+                if (transactions.length > 0) {
+                    alert(`Transaction History:\n${transactions.join('\n')}`);
+                } else {
+                    alert('No transactions yet.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

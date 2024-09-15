@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Expense Sharing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #e0f7fa, #b2dfdb);
+            color: #1b5e20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 900px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #004d40;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #00796b;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .info {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .info p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .green {
+            background-color: #388e3c;
+        }
+
+        .blue {
+            background-color: #0288d1;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .image {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .animations {
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+        }
+
+        .floating-dollar, .floating-coin {
+            position: absolute;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        .floating-dollar {
+            top: -40px;
+            left: -30px;
+        }
+
+        .floating-coin {
+            bottom: 0px;
+            right: 0px;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trustes Expense Sharing</h1>
+            <p>Share expenses seamlessly and transparently with trusted peers.</p>
+        </header>
+
+        <div class="content">
+            <div class="info">
+                <p>Trust Expense Sharing ensures that expenses among friends, family, or colleagues are shared fairly and transparently. Track shared expenses, split costs, and settle up without any hassles.</p>
+                <div class="buttons">
+                    <button class="btn green">Start Sharing</button>
+                    <button class="btn blue">Learn More</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="WhatsApp Image 2024-09-15 at 10.26.17_c1aafa3b.jpg" alt="Expense Sharing Illustration">
+            </div>
+        </div>
+
+        <div class="animations">
+            <img src="Screenshot_2024-09-15_002152-removebg-preview.png" class="floating-dollar" alt="Floating Dollar"width="100" hight="70">
+            <img src="Screenshot_2024-09-15_002129-removebg-preview.png" class="floating-coin" alt="Floating Coin"width="100" hight="70">
+        </div>
+    </div>
+</body>
+</html>
